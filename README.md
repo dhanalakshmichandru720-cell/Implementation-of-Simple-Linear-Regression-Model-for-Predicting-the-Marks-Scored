@@ -57,8 +57,8 @@ plt.legend()
 plt.show()
 ``
 /*
-Developed by: 
-RegisterNumber:  
+Developed by: dhanalakshmi.c
+RegisterNumber: 25018616  
 */
 ```
 
