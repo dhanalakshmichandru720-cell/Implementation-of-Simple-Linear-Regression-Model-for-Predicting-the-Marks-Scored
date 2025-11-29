@@ -14,9 +14,9 @@ To write a program to predict the marks scored by a student using the simple lin
 4. 
 
 ## Program:
-/*
+
 # Plot the data points and regression line
-import numpy as np
+im
 import matplotlib.pyplot as plt
 
 # Sample dataset (Univariate)
