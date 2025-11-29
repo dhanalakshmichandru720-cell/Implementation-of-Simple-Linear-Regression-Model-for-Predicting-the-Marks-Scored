@@ -14,56 +14,41 @@ To write a program to predict the marks scored by a student using the simple lin
 4. 
 
 ## Program:
-`# Import libraries
+/*
+# Plot the data points and regression line
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import train_test_split
 
-# Sample dataset (Study Hours vs Marks)
-data = {
-    'Hours': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    'Marks': [35, 40, 50, 55, 65, 70, 75, 80, 85, 95]
-}
-df = pd.DataFrame(data)
+# Sample dataset (Univariate)
+x = np.array([1, 2, 3, 4, 5])     # Input feature
+y = np.array([2, 4, 5, 4, 5])     # Target values
 
-# Split into features (X) and target (y)
-X = df[['Hours']]  # Independent variable
-y = df['Marks']    # Dependent variable
+# Number of observations
+n = len(x)
 
-# Train-test split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Calculate slope (m) and intercept (c)
+m = (n * np.sum(x * y) - np.sum(x) * np.sum(y)) / (n * np.sum(x ** 2) - (np.sum(x)) ** 2)
+c = (np.sum(y) - m * np.sum(x)) / n
 
-# Create and train the model
-model = LinearRegression()
-model.fit(X_train, y_train)
+print(f"Slope (m): {m}")
+print(f"Intercept (c): {c}")
 
-# Predict on test data
-y_pred = model.predict(X_test)
-
-# Display results
-print("Slope (m):", model.coef_[0])
-print("Intercept (b):", model.intercept_)
-print("Predicted Marks for 7.5 hours study:", model.predict([[7.5]])[0])
-
-# Plotting
-plt.scatter(X, y, color='blue', label='Actual Data')
-plt.plot(X, model.predict(X), color='red', label='Regression Line')
-plt.xlabel('Study Hours')
-plt.ylabel('Marks Scored')
-plt.title('Study Hours vs Marks')
+# Predict y values
+y_pred = m * x + c
+plt.scatter(x, y, color='blue', label='Actual data')
+plt.plot(x, y_pred, color='red', label='Fitted line')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Univariate Linear Regression using Least Squares')
 plt.legend()
 plt.show()
-``
-/*
 Developed by: dhanalakshmi.c
 RegisterNumber: 25018616  
 */
 ```
 
 ## Output:
-<img width="1449" height="676" alt="Screenshot (146)" src="https://github.com/user-attachments/assets/76188d15-927c-43ae-bc26-a9b1397a0fb1" />
+<img width="713" height="612" alt="Screenshot 2025-11-29 105856" src="https://github.com/user-attachments/assets/de37802e-dd8a-4fcb-bd12-3d9f3821a43c" />
 
 
 
