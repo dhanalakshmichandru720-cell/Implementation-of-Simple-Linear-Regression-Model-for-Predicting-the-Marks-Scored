@@ -44,7 +44,7 @@ plt.legend()
 plt.show()
 Developed by: dhanalakshmi.c
 RegisterNumber: 25018616  
-*/
+*
 ```
 
 ## Output:
