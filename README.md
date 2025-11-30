@@ -57,8 +57,17 @@ RegisterNumber: 25018616
 */
 ```
 
+## Output
+
+
 ## Output:
 <img width="645" height="849" alt="Screenshot 2025-11-30 104559" src="https://github.com/user-attachments/assets/7f04b83f-8c3b-4484-a5c9-dcb9b8c00c5e" />
+
+
+
+
+## Result:
+Thus the program to implement the simple linear regression model for predicting the marks scored is written and verified using python programming.
 
 
 
